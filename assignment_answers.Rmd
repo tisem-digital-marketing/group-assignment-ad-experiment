@@ -1,16 +1,11 @@
 ---
 title: "My answers"
 author: "My name"
-date: "2024-04-30"
 output: html_document
 ---
 
 
-\hrulefill
-
 ## Instructions
-
-This group assignment is due on the **`r rmarkdown::metadata$duedate`** at **`r rmarkdown::metadata$duetime`**.
 
 Solutions will be turned in via GitHub Classroom.
 **Only most recent commit on the main branch when the assignment is due will be graded**.
@@ -152,9 +147,8 @@ $$
 
 9. [2 points] What is the average treatment effect of advertising on sales in your data? Is it statistically significant? (max. 2 sentences)
 
-```{r}
 # Write your answer here
-```
+
 
 
 10. [3 points] After seeing these results, your manager struggles with interpreting the magnitude of the effect. They suggest that you find an alternate way to report the your estimate. (max. 4 sentences)
@@ -175,19 +169,7 @@ $$
 Explain why they might have made that suggestion, and report the results of making this change to the data included in your analysis. Do your conclusions change? (max. 3 sentences)
 
 ```{r}
-# why? advertising doesnt always have immediate effect
-reg_data <-
-    ad_experiment %>%
-    filter(test_period %in% c('test', "post-test")) %>% #== "test") %>%
-    group_by(geo) %>%
-    summarise(sales = sum(sales),
-              cost = sum(cost),
-              # keeps treatment status
-              treatment_status = min(treatment_status)
-              )
-
-# 1 point regression + results
-tidy(lm(log(sales) ~ treatment_status, data = reg_data))
+Write your answer here
 ```
 
 ### Part 3: CUPED (10 points)
@@ -205,33 +187,7 @@ Write your answer here
 TIP: Print your estimate of $\theta$ so that if you make a mistake, we can award partial credit.
 
 ```{r, solution}
-# multiple ways to do this
-# (1pt) compute theta 
-cuped_data <-
-    ad_experiment %>%
-    filter(test_period %in% c("pre_test", 'test')) %>%
-    group_by(geo, test_period) %>%
-    summarise(sales = sum(sales),
-              treatment_status = min(treatment_status)
-              ) %>%
-    ungroup() %>%
-    pivot_wider(names_from=test_period, values_from = sales)
-
-# (1pt)
-theta <-
-    tidy(lm(test ~ pre_test, data = cuped_data)) %>%
-    filter(term == "pre_test") %>%
-    pluck("estimate")
-
-print(theta)
-
-# (1pt) adjust outcome
-cuped_data <-
-    cuped_data %>%
-    mutate(sales_cuped = test - theta*(pre_test - mean(cuped_data$pre_test)))
-
-# (1 pt)
-tidy(lm(log(sales_cuped) ~ treatment_status, data = cuped_data))
+# Write your answer here
 ```
 
 14. [1 point] Interpret your CUPED estimate and evaluate whether the advertising campaign increases sales based on the estimate. (max. 2 sentences)
@@ -253,27 +209,7 @@ $$
 15. [3 points] Compute and report an estimate of ROAS. Interpret your estimate. (max. 2 sentences)
 
 ```{r}
-# remark: needs to an aggregate level, not at the market level
-roi_point <-
-    ad_experiment %>%
-    filter(test_period == "test") %>%
-    # for each geo get sales and cost
-    group_by(geo) %>%
-    summarise(
-        sales = sum(sales),
-        cost = sum(cost),
-        treatment_status = min(treatment_status)
-    ) %>%
-    # average over treatment status -- 
-    # average is empirical expectation
-    group_by(treatment_status) %>%
-    summarise(sales = mean(sales),
-              cost  = mean(cost)
-    ) %>%
-    mutate(incr_revenue = sales - lag(sales),
-           incr_cost = cost - lag(cost)) %>%
-    slice(n()) %>%
-    mutate(roi = incr_revenue / incr_cost)
+# Write your answer here
 ```
 
 16.  [7 points, **Challenging**] To evaluate whether your estimate of ROAS is statistically significant, you want to construct a confidence interval for this estimate. 
@@ -307,7 +243,5 @@ helpful to ensure your writing gets to the point.
 ]
 
 
-```{r}
-# Write your answer here
-```
+Write your answer here
 
