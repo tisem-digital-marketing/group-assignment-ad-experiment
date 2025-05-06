@@ -44,7 +44,7 @@ Sentence limits often apply to questions that require written answers - stick to
 ## Context: Experiments with Advertising Effectiveness
 
 Suppose you are working at a marketing consultancy as a team of marketing analysts in the newly established (though fictitious) country of Petersville.
-Petersville is a large geographically, and is divided into 100 geographical areas, known as "Designated Market Areas" or DMAs.
+Petersville is large geographically, and is divided into 100 geographical areas, known as "Designated Market Areas" or DMAs.
 Each DMA shares common, localized, market conditions but may differ in population size.
 The citizens are generally "low mobility", meaning they rarely travel beyond the DMA they reside in, except for 10% of citizens who commute long distances into different DMAs for work.
 Furthermore, Petersville has strict privacy regulations which prevents experiments from being conducted at the unit of individual citizens by either the government or firms that operate in country.
@@ -121,7 +121,7 @@ Also compute the standard error for the sales. Store the data in a dataset named
 ```
 
 
-6. [1 points] Create a plot that shows the difference in total sales between treatments. Include the error bars in your plot.
+6. [1 points] Create a plot that shows the difference in average total sales between treatments averaged where the "average" is taken over geographical areas. Include standard error bars in your plot.
 
 ```{r}
 # Write your answer here
@@ -130,13 +130,7 @@ Also compute the standard error for the sales. Store the data in a dataset named
 
 7. [1 points] Write down a linear regression equation that allows you to estimate the average treatment effect of advertising on sales, where the "average" is taken over geographical areas. 
 
-```{block}
-
-$$
-sales_i = \beta_0 + \beta_1 Treatment_i + \varepsilon_i
-$$
-
-```
+Write your answer here
 
 8. [2 points] Estimate the linear regression you outlined above and report the results.
 
@@ -147,7 +141,7 @@ $$
 
 9. [2 points] What is the average treatment effect of advertising on sales in your data? Is it statistically significant? (max. 2 sentences)
 
-# Write your answer here
+Write your answer here
 
 
 
@@ -206,7 +200,7 @@ $$
 \text{ROAS} = \frac{\text{incremental revenue}}{\text{incremental cost}} = \frac{E(\Delta R)}{E(\Delta C)}
 $$
 
-15. [3 points] Compute and report an estimate of ROAS. Interpret your estimate. (max. 2 sentences)
+15. [3 points, **Challenging**] Compute and report an estimate of ROAS. Interpret your estimate. (max. 2 sentences)
 
 ```{r}
 # Write your answer here
@@ -225,7 +219,7 @@ HINT: There may be more than one correct way to do this. We recommend thinking a
 
 ## Part 4: Summary & Managerial Implications (10 points)
 
-17. [10 points] Using all of the answers and analysis you have performed so far, write a "Management
+17. [10 points] Using the analysis you have performed so far, write a "Management
 Summary" that details the research question, relevance, outlines the experiment performed,
 summarises the main findings and provides a managerial recommendation. 
 
