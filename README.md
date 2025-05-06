@@ -1,10 +1,10 @@
 # Group Assignment: Experiments on Advertising Effectiveness
 
-[![Template Lifecycle](https://img.shields.io/badge/lifecycle-experimental-blue.svg)](https://www.tidyverse.org/lifecycle/#experimental)
-[![Template Version](https://img.shields.io/badge/version-2024-green.svg)]()
+[![Template Lifecycle](https://img.shields.io/badge/lifecycle-stable-blue.svg)](https://www.tidyverse.org/lifecycle/#experimental)
+[![Template Version](https://img.shields.io/badge/version-2025-green.svg)]()
 
 **The group assignment is grade relevant.**
-Check the [course syllabus](https://tisem-digital-marketing.github.io/2024-smwa/assets/smwa-syllabus-2024.pdf) for more details.
+Check the [course syllabus](https://tisem-digital-marketing.github.io/2025-smwa/assets/smwa-syllabus-2025.pdf) for more details.
 
 ## Meta-Information 
 
@@ -15,7 +15,7 @@ Check the [course syllabus](https://tisem-digital-marketing.github.io/2024-smwa/
 
 ## Grading Information
 
-* Due Date: **May 13, 2023 at 23:59**
+* Due Date: **May 21, 2025 at 23:59**
 
 Submission is via GitHub Classroom.
 Your most recent commit that is on the `main` branch that is available online on GitHub before the due date will be graded.
@@ -47,7 +47,7 @@ Group members **must accept** this invitation to be able to view and contribute 
 To work on this assignment, first clone the GitHub repository to your machine:
 
 ```{bash}
-git clone https://github.com/tisem-digital-marketing/YYYY-smwa-assignment-01-TEAMNAME.git
+git clone https://github.com/tisem-digital-marketing/YYYY-smwa-assignment-TEAMNAME.git
 ```
 
 where you replace "TEAMNAME" with your group's team name.
@@ -74,4 +74,4 @@ from a terminal when your working directory is this folder, **or** use the Git p
 *   Course: [Social Media and Web Analytics](https://github.com/tisem-digital-marketing)
 *   Institute: [Dept of Marketing, TiSEM](https://www.tilburguniversity.edu/about/schools/economics-and-management/organization/departments/marketing)
 *   Template Link: [click here](https://github.com/tisem-digital-marketing/smwa-assignment-ad-experiment-student)
-*   Current Version: [Spring 2023](https://tisem-digital-marketing.github.io/2024-smwa/)
+*   Current Version: [Spring 2025](https://tisem-digital-marketing.github.io/2025-smwa/)
